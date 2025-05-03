@@ -6,11 +6,8 @@ body {
     color: #333;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     color: #2a3d66;
-    /* Deep blue for headers */
 }
 
 p {
@@ -25,6 +22,12 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Viewport for Mobile Scaling */
+meta {
+    name: viewport;
+    content: "width=device-width, initial-scale=1";
 }
 
 /* Header Styles */
@@ -48,6 +51,7 @@ header {
     height: auto;
 }
 
+/* Navigation */
 nav ul {
     list-style: none;
     display: flex;
@@ -78,7 +82,6 @@ nav ul li a:hover {
 .hero {
     background: url('r2.png') no-repeat center center;
     background-size: cover;
-    /* Ensures image covers entire section without stretching */
     color: white;
     text-align: center;
     padding: 75px 20px;
@@ -86,12 +89,10 @@ nav ul li a:hover {
 
 .hero-text h1 {
     color: #ff3c00;
-    /* bright gold, change as needed */
 }
 
 .hero-text p {
     color: #ffffff;
-    /* white text for subheading */
 }
 
 /* Facilities Section */
@@ -210,6 +211,7 @@ footer a:hover {
     .facility-item {
         width: 80%;
         margin: 0 auto;
+        padding: 15px;
     }
 
     #facilities {
@@ -218,5 +220,36 @@ footer a:hover {
 
     #admissions {
         padding: 30px 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+
+    .hero {
+        padding: 50px 10px;
+        background-size: contain;
+    }
+
+    .hero-text h1 {
+        font-size: 24px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    footer a {
+        display: block;
+        margin: 5px 0;
     }
 }
