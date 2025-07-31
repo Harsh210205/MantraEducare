@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Testimonials - Mantra EduCare School</title>
   <style>
     body {
@@ -101,6 +102,29 @@
       margin: 0 5px;
       text-decoration: underline;
     }
+
+h2 {
+  color: #004080;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+
+h2::after {
+  content: "";
+  display: block;
+  width: 350px;
+  height: 3px;
+  background-color: #004080;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
   </style>
 
   <script>
@@ -130,11 +154,36 @@
     </div>
   </header>
 
-  <section>
-    <h2>Testimonials</h2>
-    <p>"Amazing school with supportive teachers!" – Parent</p>
-    <p>"I love the activities and the learning environment!" – Student</p>
-  </section>
+  <main>
+    <section>
+      <h2>What Parents Say</h2>
+
+      <blockquote>
+        <p>
+          “Mantra EduCare is a second home for our daughter. She looks forward to school every day and comes back with a
+          smile and stories to share!”
+        </p>
+        <footer>– Priya Sharma, Parent of a Junior KG student</footer>
+      </blockquote>
+
+      <blockquote>
+        <p>
+          “The teachers are kind, creative, and so patient with the kids. Our son’s confidence has grown tremendously
+          since he joined the Play Group.”
+        </p>
+        <footer>– Raj Patel, Parent of a Play Group student</footer>
+      </blockquote>
+
+      <blockquote>
+        <p>
+          “We love how the school focuses on overall development. My child has learned good habits, language skills, and
+          enjoys every activity at school.”
+        </p>
+        <footer>– Sneha Desai, Parent of a Senior KG student</footer>
+      </blockquote>
+    </section>
+  </main>
+
 
   <footer>
     <p>&copy; 2025 Mantra EduCare School | Follow us on:
@@ -144,4 +193,5 @@
     </p>
   </footer>
 </body>
+
 </html>

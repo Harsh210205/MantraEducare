@@ -1,162 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Courses - Mantra EduCare School</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses - Mantra EduCare School</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
-    header {
-      background-color: #004080;
-      color: white;
-    }
+        header {
+            background-color: #004080;
+            color: white;
+        }
 
-    .header-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      flex-wrap: wrap;
-    }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            flex-wrap: wrap;
+        }
 
-    .logo img {
-      height: 50px;
-    }
+        .logo img {
+            height: 50px;
+        }
 
-    .nav-container {
-      display: flex;
-      align-items: center;
-    }
+        .nav-container {
+            display: flex;
+            align-items: center;
+        }
 
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 20px;
-    }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
 
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-    }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
 
-    nav ul li a.active {
-      font-weight: bold;
-      text-decoration: underline;
-    }
+        nav ul li a.active {
+            font-weight: bold;
+            text-decoration: underline;
+        }
 
-    .toggle-btn {
-      display: none;
-      font-size: 26px;
-      background: none;
-      border: none;
-      color: white;
-      cursor: pointer;
-      margin-left: auto;
-    }
+        .toggle-btn {
+            display: none;
+            font-size: 26px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            margin-left: auto;
+        }
 
-    @media (max-width: 768px) {
-      .toggle-btn {
-        display: block;
-      }
+        @media (max-width: 768px) {
+            .toggle-btn {
+                display: block;
+            }
 
-      nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        display: none;
-        background-color: #004080;
-        width: 100%;
-        padding: 10px 20px;
-      }
+            nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+                display: none;
+                background-color: #004080;
+                width: 100%;
+                padding: 10px 20px;
+            }
 
-      nav ul.show {
-        display: flex;
-      }
+            nav ul.show {
+                display: flex;
+            }
 
-      nav ul li {
-        width: 100%;
-        padding: 8px 0;
-      }
+            nav ul li {
+                width: 100%;
+                padding: 8px 0;
+            }
 
-      .nav-container {
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
+            .nav-container {
+                width: 100%;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
 
-    @media (min-width: 769px) {
-      nav {
-        margin-left: auto;
-      }
-    }
+        @media (min-width: 769px) {
+            nav {
+                margin-left: auto;
+            }
+        }
 
-    section {
-      padding: 20px;
-    }
+        section {
+            padding: 20px;
+        }
 
-    footer {
-      background-color: #004080;
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-    }
+        footer {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
 
-    footer a {
-      color: white;
-      margin: 0 5px;
-      text-decoration: underline;
-    }
-  </style>
-  <script>
-    function toggleMenu() {
-      const navList = document.getElementById("nav-list");
-      navList.classList.toggle("show");
-    }
-  </script>
+        footer a {
+            color: white;
+            margin: 0 5px;
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            const navList = document.getElementById("nav-list");
+            navList.classList.toggle("show");
+        }
+    </script>
 </head>
+
 <body>
-  <header>
-    <div class="header-container">
-      <div class="logo">
-        <img src="images.png" alt="Mantra EduCare School Logo" />
-      </div>
-      <button class="toggle-btn" onclick="toggleMenu()">☰</button>
-      <div class="nav-container">
-        <nav>
-          <ul id="nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="courses.html" class="active">Courses</a></li>
-            <li><a href="testimonials.html">Testimonials</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images.png" alt="Mantra EduCare School Logo" />
+            </div>
+            <button class="toggle-btn" onclick="toggleMenu()">☰</button>
+            <div class="nav-container">
+                <nav>
+                    <ul id="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html" class="active">Courses</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-  <section>
-    <h2>Our Courses</h2>
-    <ul>
-      <li>Mathematics Foundation</li>
-      <li>Science and Discovery</li>
-      <li>Language and Communication</li>
-      <li>Creative Arts & Crafts</li>
-    </ul>
-  </section>
+    <main>
+        <section style="padding: 40px 20px; max-width: 1200px; margin: auto;">
+            <h2 style="color: #004080; font-size: 32px; text-align: center; margin-bottom: 40px;">
+                Our Courses
+            </h2>
 
-  <footer>
-    <p>&copy; 2025 Mantra EduCare School | Follow us on:
-      <a href="#">Facebook</a> |
-      <a href="#">Twitter</a> |
-      <a href="#">Instagram</a>
-    </p>
-  </footer>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+                <!-- Play Group -->
+                <div style="flex: 1 1 300px; background: #f0f8ff; border-radius: 12px; padding: 20px;">
+                    <h3 style="color: #004080;">Play Group</h3>
+                    <p>Designed for children aged 2 to 3 years, our Play Group nurtures curiosity, motor skills, and
+                        social interaction through stories, play, and song-based learning in a safe and loving
+                        environment.</p>
+                </div>
+
+                <!-- Junior KG -->
+                <div style="flex: 1 1 300px; background: #e6f2ff; border-radius: 12px; padding: 20px;">
+                    <h3 style="color: #004080;">Junior KG</h3>
+                    <p>For ages 3 to 4, Junior KG introduces foundational concepts in language, numbers, and colors
+                        using interactive games, phonics, craft activities, and early writing practice.</p>
+                </div>
+
+                <!-- Senior KG -->
+                <div style="flex: 1 1 300px; background: #f0f8ff; border-radius: 12px; padding: 20px;">
+                    <h3 style="color: #004080;">Senior KG</h3>
+                    <p>Tailored for 4 to 5-year-olds, Senior KG prepares students for primary school with structured
+                        learning in literacy, numeracy, science, and theme-based projects.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>&copy; 2025 Mantra EduCare School | Follow us on:
+            <a href="#">Facebook</a> |
+            <a href="#">Twitter</a> |
+            <a href="#">Instagram</a>
+        </p>
+    </footer>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -109,6 +110,74 @@
       margin: 0 5px;
       text-decoration: underline;
     }
+/*efgolwewe*/
+
+.about-section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.about-section h2 {
+  color: #004080;
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-section h3 {
+  color: #003060;
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+.about-section p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.7;
+  margin: 15px 0;
+}
+
+.about-section ul {
+  margin: 10px 0 20px 20px;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.about-section ul li {
+  font-size: 18px;
+  padding: 6px 0;
+  position: relative;
+}
+
+.about-section ul li::before {
+  content: "🌟";
+  position: absolute;
+  left: -20px;
+}
+
+blockquote {
+  background-color: #f0f8ff;
+  border-left: 6px solid #004080;
+  margin: 20px 30px;
+  padding: 20px;
+  border-radius: 10px;
+  font-style: italic;
+  font-size: 18px;
+  color: #333;
+}
+
+blockquote footer {
+  margin-top: 5px;
+  font-weight: bold;
+  text-align: right;
+  
+}
+
+
   </style>
   <script>
     function toggleMenu() {
@@ -116,6 +185,7 @@
     }
   </script>
 </head>
+
 <body>
   <header>
     <div class="header-container">
@@ -137,11 +207,41 @@
     </div>
   </header>
 
-  <section>
-    <h2>About Us</h2>
-    <p>Mantra EduCare School is dedicated to fostering academic excellence and holistic growth among students.</p>
-    <p>Our team consists of experienced educators who are passionate about shaping future leaders.</p>
-  </section>
+  <main>
+    <section class="about-section">
+      <h2>Welcome to Mantra EduCare</h2>
+      <p>
+        <strong>Mantra EduCare School</strong> is a joyful place where learning begins with love and curiosity. Located in a nurturing and child-friendly environment, we aim to provide a foundation that prepares children for lifelong learning and success.
+      </p>
+
+      <h3>Our Vision</h3>
+      <p>
+        To empower young learners with the tools, values, and confidence they need to grow into responsible, creative, and compassionate individuals.
+      </p>
+
+      <h3>Our Mission</h3>
+      <ul>
+        <li>✔️ Foster a love for learning through activity-based education.</li>
+        <li>✔️ Create a safe and happy learning environment for every child.</li>
+        <li>✔️ Encourage imagination, expression, and curiosity through play.</li>
+      </ul>
+
+      <h3>What Makes Us Special</h3>
+      <ul>
+        <li>🎨 Fun-filled curriculum with art, music, dance, and stories.</li>
+        <li>📚 Experienced and caring teachers trained in early childhood education.</li>
+        <li>🧠 Focus on social, emotional, and intellectual development.</li>
+        <li>🏫 Clean, safe, and colorful classrooms and play areas.</li>
+      </ul>
+
+      <blockquote>
+        “Education is the most powerful weapon which you can use to change the world.”
+        <footer>– Nelson Mandela</footer>
+      </blockquote>
+    </section>
+  </main>
+
+
 
   <footer>
     <p>&copy; 2025 Mantra EduCare School | Follow us on:
@@ -151,4 +251,5 @@
     </p>
   </footer>
 </body>
+
 </html>
