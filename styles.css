@@ -6,98 +6,100 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Header and Navigation */
 header {
     background-color: #2a3d66;
-    padding: 20px;
     color: white;
-    text-align: center;
+    padding: 10px 0;
 }
 
-header .logo img {
-    width: 150px;
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    width: 140px;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
+    margin: 0;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 17px;
+    padding: 6px 10px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.hero {
-    background-color: #4CAF50;
-    padding: 50px;
-    text-align: center;
-    color: white;
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #1d2a4d;
+    border-radius: 5px;
+    color: #f1f1f1;
 }
 
-.hero h1 {
-    font-size: 36px;
-}
-
-.hero p {
-    font-size: 20px;
-}
-
+/* Hero or Section Area */
 section {
-    padding: 20px;
-    margin: 20px 0;
+    padding: 40px 5%;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin: 20px 5%;
+    border-radius: 8px;
 }
 
 h2 {
     text-align: center;
     font-size: 28px;
+    margin-bottom: 20px;
 }
 
-.course-grid {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.course-item {
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    padding: 20px;
-    width: 30%;
-    margin: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial {
-    background-color: #fff;
-    padding: 20px;
-    margin: 10px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
+/* Footer */
 footer {
     background-color: #2a3d66;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
+    margin-top: 40px;
 }
 
 footer a {
     color: #f1f1f1;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 8px;
 }
 
-/* Responsive Styles */
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    .course-grid {
+    .header-container {
         flex-direction: column;
         align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 8px 0;
     }
 }
