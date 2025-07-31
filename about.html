@@ -1,40 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Mantra EduCare School</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - Mantra EduCare School</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <img src="images.png" alt="Mantra EduCare School Logo">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About Us</a></li>
-                    <li><a href="courses.html">Courses</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="images.png" alt="Mantra EduCare School Logo" />
+      </div>
+      <button class="menu-toggle">&#9776;</button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About Us</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>
-            Mantra EduCare School is a place of learning and growth, where students are empowered with knowledge for a brighter future.
-        </p>
-    </section>
+  <section id="about" class="page-section">
+    <h2>About Mantra EduCare School</h2>
+    <p>
+      At <strong>Mantra EduCare School</strong>, we believe that education is not just about books and exams—it's about nurturing a child’s full potential. We provide a holistic learning environment that encourages curiosity, creativity, and confidence.
+    </p>
+    <p>
+      Established with the vision of transforming traditional education, Mantra EduCare blends academic excellence with life skills, ensuring every student is prepared for future challenges.
+    </p>
+    <h3>Our Mission</h3>
+    <p>
+      To cultivate a safe, inclusive, and inspiring environment where every student is empowered to reach their full potential.
+    </p>
+    <h3>Core Values</h3>
+    <ul>
+      <li>🔹 Respect and Integrity</li>
+      <li>🔹 Curiosity and Innovation</li>
+      <li>🔹 Academic Excellence</li>
+      <li>🔹 Empathy and Teamwork</li>
+    </ul>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Mantra EduCare School | Follow us on:
-            <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
-        </p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 Mantra EduCare School | Follow us on:
+      <a href="#">Facebook</a> |
+      <a href="#">Twitter</a> |
+      <a href="#">Instagram</a>
+    </p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggleBtn = document.querySelector('.menu-toggle');
+      const navMenu = document.querySelector('nav ul');
+      toggleBtn.addEventListener('click', function () {
+        navMenu.classList.toggle('show');
+      });
+    });
+  </script>
 </body>
 </html>
