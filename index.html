@@ -161,14 +161,19 @@
     /* Responsive */
     @media (max-width: 768px) {
       .header-container {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
       }
 
       .menu-toggle {
         display: block;
-        margin-top: 10px;
+        position: absolute;
+        right: 20px;
+        top: 18px;
+        z-index: 1001;
       }
+
 
       nav {
         width: 100%;
@@ -254,7 +259,9 @@
   <section class="about">
     <h2>Welcome to Mantra EduCare</h2>
     <p>
-      Mantra EduCare School is committed to providing a nurturing and inclusive environment that encourages every student to grow academically, emotionally, and socially. Our dedicated staff, modern infrastructure, and engaging curriculum help shape future-ready citizens.
+      Mantra EduCare School is committed to providing a nurturing and inclusive environment that encourages every
+      student to grow academically, emotionally, and socially. Our dedicated staff, modern infrastructure, and engaging
+      curriculum help shape future-ready citizens.
     </p>
   </section>
 

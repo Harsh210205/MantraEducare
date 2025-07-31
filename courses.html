@@ -1,71 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Courses - Mantra EduCare School</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courses - Mantra EduCare School</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #004080;
+      color: white;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    nav ul li a.active {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .toggle-btn {
+      display: none;
+      font-size: 26px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      margin-left: auto;
+    }
+
+    @media (max-width: 768px) {
+      .toggle-btn {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        display: none;
+        background-color: #004080;
+        width: 100%;
+        padding: 10px 20px;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      nav ul li {
+        width: 100%;
+        padding: 8px 0;
+      }
+
+      .nav-container {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (min-width: 769px) {
+      nav {
+        margin-left: auto;
+      }
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    footer a {
+      color: white;
+      margin: 0 5px;
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    function toggleMenu() {
+      const navList = document.getElementById("nav-list");
+      navList.classList.toggle("show");
+    }
+  </script>
 </head>
-
 <body>
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <img src="images.png" alt="Mantra EduCare School Logo">
-            </div>
-            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-            <nav>
-                <ul id="menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="courses.html">Courses</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="images.png" alt="Mantra EduCare School Logo" />
+      </div>
+      <button class="toggle-btn" onclick="toggleMenu()">☰</button>
+      <div class="nav-container">
+        <nav>
+          <ul id="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="courses.html" class="active">Courses</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
+  <section>
+    <h2>Our Courses</h2>
+    <ul>
+      <li>Mathematics Foundation</li>
+      <li>Science and Discovery</li>
+      <li>Language and Communication</li>
+      <li>Creative Arts & Crafts</li>
+    </ul>
+  </section>
 
-    <section id="courses">
-        <h2>Our Courses</h2>
-        <p class="section-intro">At Mantra EduCare School, we offer age-appropriate and engaging educational programs
-            designed to support early childhood development and prepare children for the future.</p>
-
-        <div class="course-grid">
-            <div class="course-item">
-                <h3>Play Group</h3>
-                <p>Our Play Group program is designed for toddlers aged 2 to 3 years. We focus on developing social
-                    interaction, basic motor skills, and communication through fun-filled activities like storytelling,
-                    music, free play, and art & craft.</p>
-            </div>
-            <div class="course-item">
-                <h3>Nursery</h3>
-                <p>For children aged 3 to 4 years, our Nursery program blends foundational learning with play. Children
-                    are introduced to alphabets, numbers, colors, shapes, and other pre-academic skills while fostering
-                    curiosity and imagination.</p>
-            </div>
-            <div class="course-item">
-                <h3>Senior (LKG & UKG)</h3>
-                <p>In the Senior class (LKG & UKG), children aged 4 to 6 years engage in structured learning. Our
-                    curriculum focuses on language development, early math, environmental awareness, life skills, and
-                    preparation for primary schooling.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Mantra EduCare School | Follow us on:
-            <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
-        </p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 Mantra EduCare School | Follow us on:
+      <a href="#">Facebook</a> |
+      <a href="#">Twitter</a> |
+      <a href="#">Instagram</a>
+    </p>
+  </footer>
 </body>
-<script>
-function toggleMenu() {
-  const menu = document.getElementById('menu');
-  menu.classList.toggle('show');
-}
-</script>
-
 </html>

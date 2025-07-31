@@ -1,56 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us - Mantra EduCare School</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
 
+    header {
+      background-color: #004080;
+      color: white;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    nav ul li a.active {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .toggle-btn {
+      display: none;
+      font-size: 26px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .toggle-btn {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        z-index: 999;
+      }
+
+      .nav-container {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        display: none;
+        background-color: #004080;
+        width: 100%;
+        padding: 10px 20px;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      nav ul li {
+        width: 100%;
+        padding: 8px 0;
+      }
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    footer a {
+      color: white;
+      margin: 0 5px;
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-list").classList.toggle("show");
+    }
+  </script>
+</head>
 <body>
   <header>
     <div class="header-container">
       <div class="logo">
-        <img src="images.png" alt="Mantra EduCare School Logo">
+        <img src="images.png" alt="Mantra EduCare School Logo" />
       </div>
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-      <nav>
-        <ul id="menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="courses.html">Courses</a></li>
-          <li><a href="testimonials.html">Testimonials</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+      <button class="toggle-btn" onclick="toggleMenu()">☰</button>
+      <div class="nav-container">
+        <nav>
+          <ul id="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About Us</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
-
-  <section id="about" class="page-section">
-    <h2>About Mantra EduCare School</h2>
-    <p>
-      At <strong>Mantra EduCare School</strong>, we believe that education is not just about books and exams—it's about
-      nurturing a child’s full potential. We provide a holistic learning environment that encourages curiosity,
-      creativity, and confidence.
-    </p>
-    <p>
-      Established with the vision of transforming traditional education, Mantra EduCare blends academic excellence with
-      life skills, ensuring every student is prepared for future challenges.
-    </p>
-    <h3>Our Mission</h3>
-    <p>
-      To cultivate a safe, inclusive, and inspiring environment where every student is empowered to reach their full
-      potential.
-    </p>
-    <h3>Core Values</h3>
-    <ul>
-      <li>🔹 Respect and Integrity</li>
-      <li>🔹 Curiosity and Innovation</li>
-      <li>🔹 Academic Excellence</li>
-      <li>🔹 Empathy and Teamwork</li>
-    </ul>
+  <section>
+    <h2>About Us</h2>
+    <p>Mantra EduCare School is dedicated to fostering academic excellence and holistic growth among students.</p>
+    <p>Our team consists of experienced educators who are passionate about shaping future leaders.</p>
   </section>
 
   <footer>
@@ -60,22 +150,5 @@
       <a href="#">Instagram</a>
     </p>
   </footer>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const toggleBtn = document.querySelector('.menu-toggle');
-      const navMenu = document.querySelector('nav ul');
-      toggleBtn.addEventListener('click', function () {
-        navMenu.classList.toggle('show');
-      });
-    });
-  </script>
 </body>
-<script>
-function toggleMenu() {
-  const menu = document.getElementById('menu');
-  menu.classList.toggle('show');
-}
-</script>
-
 </html>

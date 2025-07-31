@@ -1,11 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Testimonials - Mantra EduCare School</title>
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #004080;
+      color: white;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .toggle-btn {
+      display: none;
+      font-size: 26px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    nav ul li a.active {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .toggle-btn {
+        display: block;
+      }
+
+      nav {
+        width: 100%;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        display: none;
+        background-color: #004080;
+        padding: 10px 0 10px 20px;
+        gap: 10px;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      nav ul li {
+        width: 100%;
+      }
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    footer a {
+      color: white;
+      margin: 0 5px;
+      text-decoration: underline;
+    }
+  </style>
+
+  <script>
+    function toggleMenu() {
+      const navList = document.getElementById("nav-list");
+      navList.classList.toggle("show");
+    }
+  </script>
 </head>
 
 <body>
@@ -14,8 +117,9 @@
       <div class="logo">
         <img src="images.png" alt="Mantra EduCare School Logo" />
       </div>
+      <button class="toggle-btn" onclick="toggleMenu()">☰</button>
       <nav>
-        <ul>
+        <ul id="nav-list">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="courses.html">Courses</a></li>
@@ -26,39 +130,18 @@
     </div>
   </header>
 
-  <section class="page-section">
-    <h2>What Our Students Say</h2>
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <p>"Mantra EduCare has provided me with all the tools I need to succeed in life!"</p>
-        <span>- Aarav Mehta</span>
-      </div>
-      <div class="testimonial-card">
-        <p>"The teachers are very supportive and the courses are extremely well-structured."</p>
-        <span>- Sneha Sharma</span>
-      </div>
-      <div class="testimonial-card">
-        <p>"I enjoyed every moment here. The environment is friendly and encouraging."</p>
-        <span>- Rahul Desai</span>
-      </div>
-      <div class="testimonial-card">
-        <p>"Highly recommended for anyone who wants quality education and guidance."</p>
-        <span>- Anjali Patel</span>
-      </div>
-    </div>
+  <section>
+    <h2>Testimonials</h2>
+    <p>"Amazing school with supportive teachers!" – Parent</p>
+    <p>"I love the activities and the learning environment!" – Student</p>
   </section>
 
   <footer>
     <p>&copy; 2025 Mantra EduCare School | Follow us on:
-      <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+      <a href="#">Facebook</a> |
+      <a href="#">Twitter</a> |
+      <a href="#">Instagram</a>
     </p>
   </footer>
 </body>
-<script>
-function toggleMenu() {
-  const menu = document.getElementById('menu');
-  menu.classList.toggle('show');
-}
-</script>
-
 </html>
