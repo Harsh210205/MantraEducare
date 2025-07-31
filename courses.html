@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Courses - Mantra EduCare School</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <div class="header-container">
             <div class="logo">
                 <img src="images.png" alt="Mantra EduCare School Logo">
             </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <nav>
-                <ul>
+                <ul id="menu">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="courses.html" class="active">Courses</a></li>
+                    <li><a href="courses.html">Courses</a></li>
                     <li><a href="testimonials.html">Testimonials</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -24,22 +27,30 @@
         </div>
     </header>
 
+
     <section id="courses">
         <h2>Our Courses</h2>
-        <p class="section-intro">At Mantra EduCare School, we offer age-appropriate and engaging educational programs designed to support early childhood development and prepare children for the future.</p>
+        <p class="section-intro">At Mantra EduCare School, we offer age-appropriate and engaging educational programs
+            designed to support early childhood development and prepare children for the future.</p>
 
         <div class="course-grid">
             <div class="course-item">
                 <h3>Play Group</h3>
-                <p>Our Play Group program is designed for toddlers aged 2 to 3 years. We focus on developing social interaction, basic motor skills, and communication through fun-filled activities like storytelling, music, free play, and art & craft.</p>
+                <p>Our Play Group program is designed for toddlers aged 2 to 3 years. We focus on developing social
+                    interaction, basic motor skills, and communication through fun-filled activities like storytelling,
+                    music, free play, and art & craft.</p>
             </div>
             <div class="course-item">
                 <h3>Nursery</h3>
-                <p>For children aged 3 to 4 years, our Nursery program blends foundational learning with play. Children are introduced to alphabets, numbers, colors, shapes, and other pre-academic skills while fostering curiosity and imagination.</p>
+                <p>For children aged 3 to 4 years, our Nursery program blends foundational learning with play. Children
+                    are introduced to alphabets, numbers, colors, shapes, and other pre-academic skills while fostering
+                    curiosity and imagination.</p>
             </div>
             <div class="course-item">
                 <h3>Senior (LKG & UKG)</h3>
-                <p>In the Senior class (LKG & UKG), children aged 4 to 6 years engage in structured learning. Our curriculum focuses on language development, early math, environmental awareness, life skills, and preparation for primary schooling.</p>
+                <p>In the Senior class (LKG & UKG), children aged 4 to 6 years engage in structured learning. Our
+                    curriculum focuses on language development, early math, environmental awareness, life skills, and
+                    preparation for primary schooling.</p>
             </div>
         </div>
     </section>
@@ -50,4 +61,11 @@
         </p>
     </footer>
 </body>
+<script>
+function toggleMenu() {
+  const menu = document.getElementById('menu');
+  menu.classList.toggle('show');
+}
+</script>
+
 </html>
