@@ -1,84 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mantra EduCare School</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mantra EduCare School</title>
+  <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f9ff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background-color: #004080;
+      padding: 10px 20px;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      height: 60px;
+      width: auto;
+      max-width: 100%;
+    }
+
+    /* Hamburger Button */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Navigation */
+    nav {
+      margin-left: auto;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 8px 12px;
+      transition: background 0.3s;
+    }
+
+    nav li a:hover {
+      background-color: #0066cc;
+      border-radius: 5px;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: #eaf3ff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero-text img {
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu-toggle {
+        display: block;
+        margin-top: 10px;
+      }
+
+      nav {
+        width: 100%;
+      }
+
+      nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        display: none;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      nav li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      nav li a {
+        display: block;
+        width: 100%;
+        padding: 12px 20px;
+      }
+
+      .logo img {
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 6px;
+        border-radius: 10px;
+        max-height: 60px;
+      }
+
+      .hero-text img {
+        max-width: 100%;
+        border-radius: 8px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <img src="images.png" alt="Logo">
-            </div>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="images.png" alt="Logo" />
+      </div>
 
-            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
-            <nav id="main-nav">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#facilities">Facilities</a></li>
-                    <li><a href="#admissions">Admissions</a></li>
-                    <li><a href="#achievements">Achievements</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-text">
-            <img src="r2.png" alt="School Image">
-        </div>
-    </section>
-
-    <!-- Facilities Section -->
-    <section id="facilities">
-        <h2>Our Facilities</h2>
-        <div class="facility-list">
-            <div class="facility-item">Smart Classrooms</div>
-            <div class="facility-item">Library</div>
-            <div class="facility-item">Science Labs</div>
-        </div>
-    </section>
-
-    <!-- Admissions Section -->
-    <section id="admissions">
-        <h2>Admissions Open</h2>
-        <p>Enroll now for the academic year.</p>
-        <a href="#">Apply Now</a>
-    </section>
-
-    <!-- Achievements Section -->
-    <section id="achievements">
-        <h2>Our Achievements</h2>
-        <ul>
-            <li>100% Board Results</li>
-            <li>Top Rankings in Olympiads</li>
-            <li>National Level Science Fair Winner</li>
+      <nav>
+        <ul id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#facilities">Facilities</a></li>
+          <li><a href="#admissions">Admissions</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-    </section>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Mantra EduCare School. All rights reserved.</p>
-        <p>
-            <a href="#">Privacy Policy</a> |
-            <a href="#">Terms of Use</a>
-        </p>
-    </footer>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <img src="r2.png" alt="School Image">
+    </div>
+  </section>
 
-    <!-- JavaScript -->
-    <script>
-        function toggleMenu() {
-            const nav = document.getElementById('main-nav');
-            nav.classList.toggle('active');
-        }
-    </script>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('show');
+    }
+  </script>
 
 </body>
 </html>
